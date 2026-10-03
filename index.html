@@ -14,15 +14,20 @@
    ★ 色・文字サイズを変えたいときは、ここだけ編集すればOK ★
    ========================================================= */
 :root {
-  --bg:            #faf6ef;  /* ページ全体の背景（淡いベージュ） */
-  --bg-soft:       #f3ece0;  /* セクションの背景（少し濃いベージュ） */
+  --bg:            #fbf8f1;  /* ページ全体の背景（アイボリー） */
+  --bg-soft:       #f4ede1;  /* セクションの背景（淡いベージュ） */
   --card:          #ffffff;  /* カードの背景（白） */
-  --accent:        #7c9a85;  /* アクセント（くすみグリーン） */
-  --accent-dark:   #5b7a65;  /* アクセント濃いめ（ボタン・言葉のカード） */
-  --accent-light:  #e6eee7;  /* アクセント薄め（囲みの背景など） */
-  --text:          #2f2f2f;  /* 本文の文字色（濃いグレー） */
-  --text-sub:      #666660;  /* 補足の文字色 */
-  --line:          #e5dccd;  /* 区切り線・枠線 */
+  --accent:        #7f9e89;  /* 信頼感の色（くすみグリーン） */
+  --accent-dark:   #5f8069;  /* くすみグリーン濃いめ（見出し・言葉のカード） */
+  --accent-light:  #e7efe9;  /* くすみグリーン薄め（囲みの背景など） */
+  --cta:           #d47a5f;  /* 行動してほしい場所の色（コーラル〜テラコッタ） */
+  --cta-dark:      #c66a4b;  /* コーラル濃いめ（ボタン・押してほしい文字） */
+  --cta-light:     #fbeae3;  /* コーラル薄め（囲みの背景） */
+  --gold:          #c9a45c;  /* 強調の色（やわらかいゴールド） */
+  --gold-light:    #f6ecd3;  /* ゴールド薄め（マーカー線） */
+  --text:          #3b3936;  /* 本文の文字色（濃いチャコール） */
+  --text-sub:      #6b6862;  /* 補足の文字色 */
+  --line:          #e8dfd0;  /* 区切り線・枠線 */
 
   --fs-base:  17px;          /* 本文の文字サイズ */
   --fs-h2:    22px;          /* 見出しの文字サイズ */
@@ -42,6 +47,8 @@ body {
   letter-spacing: 0.03em;
 }
 p { margin: 0 0 1.1em; }
+p, li { text-wrap: pretty; } /* 1〜2文字だけ次の行に落ちるのを防ぐ */
+.nb { display: inline-block; } /* この単位の途中では改行しない */
 p:last-child { margin-bottom: 0; }
 
 .wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
@@ -196,7 +203,7 @@ h2::after {
 }
 .quote-list li {
   background: var(--card);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--gold);
   border-radius: 0 12px 12px 0;
   padding: 10px 16px;
   line-height: 1.7;
@@ -217,7 +224,8 @@ h2::after {
   font-size: 90px;
   line-height: 1;
   position: absolute;
-  opacity: 0.18;
+  color: var(--gold);
+  opacity: 0.55;
 }
 .motto::before { content: "“"; top: 6px; left: 14px; }
 .motto::after  { content: "”"; bottom: -28px; right: 14px; }
@@ -253,12 +261,12 @@ h2::after {
   margin-bottom: 12px;
 }
 .key-message .big span {
-  background: linear-gradient(transparent 62%, var(--accent-light) 62%);
+  background: linear-gradient(transparent 60%, var(--gold-light) 60%);
 }
 .key-message p:not(.big) { font-size: 16px; text-align: left; }
 
 /* ---------- 最後に ---------- */
-.closing p { text-align: center; }
+.closing p { text-align: center; text-wrap: balance; }
 .closing .choice {
   font-size: 19px;
   font-weight: 700;
@@ -306,17 +314,17 @@ h2::after {
   min-height: 64px;
   padding: 16px 20px;
   border-radius: 999px;
-  background: var(--accent-dark);
+  background: var(--cta-dark);
   color: #fff;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(91,122,101,0.35);
+  box-shadow: 0 6px 18px rgba(185,96,63,0.32);
   transition: transform .15s ease, box-shadow .15s ease;
   -webkit-tap-highlight-color: transparent;
 }
-.btn:active { transform: translateY(2px); box-shadow: 0 3px 10px rgba(91,122,101,0.3); }
+.btn:active { transform: translateY(2px); box-shadow: 0 3px 10px rgba(185,96,63,0.28); }
 .btn .arrow {
   width: 9px; height: 9px;
   border: solid #fff;
@@ -441,7 +449,7 @@ footer {
     <div class="motto">
       <span class="line">不安は行動でしか<br>解決できない。</span>
       <span class="line">行動の先にしか<br>成功はない。</span>
-      <span class="caption">これは、私自身がいつも心に留めている言葉です。</span>
+      <span class="caption"><span class="nb">これは、私自身が</span><span class="nb">いつも心に留めている言葉です。</span></span>
     </div>
   </div>
 </section>
@@ -469,7 +477,7 @@ footer {
     <p class="choice">見るだけで終わるのか。</p>
     <p class="choice">一歩進んでみるのか。</p>
     <p>決めるのは自分です。</p>
-    <p>その一歩が、これからの働き方や未来を<br>変えるきっかけになるかもしれません☺️</p>
+    <p>その一歩が、これからの働き方や未来を変えるきっかけになるかもしれません☺️</p>
   </div>
 </section>
 
