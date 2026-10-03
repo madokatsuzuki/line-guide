@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>公式LINEご利用の注意点</title>
+<meta name="description" content="公式LINEをご利用いただく際のお願いと、次のワンアクションのご案内です。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="公式LINEご利用の注意点">
+<meta property="og:description" content="ご登録ありがとうございます。ご利用時のお願いと、次のワンアクションのご案内です。">
+<meta name="theme-color" content="#faf6ef">
+<style>
+/* =========================================================
+   ★ 色・文字サイズを変えたいときは、ここだけ編集すればOK ★
+   ========================================================= */
+:root {
+  --bg:            #faf6ef;  /* ページ全体の背景（淡いベージュ） */
+  --bg-soft:       #f3ece0;  /* セクションの背景（少し濃いベージュ） */
+  --card:          #ffffff;  /* カードの背景（白） */
+  --accent:        #7c9a85;  /* アクセント（くすみグリーン） */
+  --accent-dark:   #5b7a65;  /* アクセント濃いめ（ボタン・言葉のカード） */
+  --accent-light:  #e6eee7;  /* アクセント薄め（囲みの背景など） */
+  --text:          #2f2f2f;  /* 本文の文字色（濃いグレー） */
+  --text-sub:      #666660;  /* 補足の文字色 */
+  --line:          #e5dccd;  /* 区切り線・枠線 */
+
+  --fs-base:  17px;          /* 本文の文字サイズ */
+  --fs-h2:    22px;          /* 見出しの文字サイズ */
+  --radius:   18px;          /* カードの角の丸み */
+}
+/* ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.95;
+  letter-spacing: 0.03em;
+}
+p { margin: 0 0 1.1em; }
+p:last-child { margin-bottom: 0; }
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+section { padding: 56px 0; }
+section.alt { background: var(--bg-soft); }
+.center { text-align: center; }
+
+/* ---------- 見出し ---------- */
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 1.6;
+  margin: 0 0 28px;
+  text-align: center;
+  font-weight: 700;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 40px; height: 3px;
+  margin: 14px auto 0;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.section-label {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* ---------- ファーストビュー ---------- */
+.hero {
+  padding: 64px 0 52px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 85% 10%, var(--accent-light) 0, transparent 45%),
+    radial-gradient(circle at 10% 90%, #f1e7d6 0, transparent 40%),
+    var(--bg);
+}
+.hero .tag {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 4px 16px;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,0.6);
+}
+.hero h1 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 30px;
+  letter-spacing: 0.06em;
+}
+.hero .thanks {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  margin-bottom: 18px;
+}
+
+/* ---------- カード ---------- */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  box-shadow: 0 4px 16px rgba(80,70,50,0.06);
+}
+.notice-card {
+  border-top: 4px solid var(--accent);
+}
+.notice-card .em {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+.note {
+  font-size: 15px;
+  color: var(--text-sub);
+}
+
+/* ---------- 縦型ステップ ---------- */
+.funnel {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.funnel li {
+  position: relative;
+  background: var(--card);
+  border: 2px solid var(--accent-light);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(80,70,50,0.05);
+  margin-bottom: 40px;
+}
+.funnel li:last-child { margin-bottom: 0; }
+/* 下に行くほど幅を狭く＝人数が少なくなるイメージ */
+.funnel li:nth-child(1) { width: 100%; }
+.funnel li:nth-child(2) { width: 88%; }
+.funnel li:nth-child(3) { width: 76%; }
+.funnel li:nth-child(4) {
+  width: 64%;
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+.funnel li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  width: 14px; height: 14px;
+  border: solid var(--accent);
+  border-width: 0 3px 3px 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+.funnel small {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.belief {
+  background: var(--accent-light);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  line-height: 1.9;
+}
+
+/* ---------- 吹き出し ---------- */
+.quote-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 10px;
+}
+.quote-list li {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 10px 16px;
+  line-height: 1.7;
+}
+
+/* ---------- 心に留めている言葉 ---------- */
+.motto {
+  padding: 40px 24px;
+  border-radius: var(--radius);
+  background: var(--accent-dark);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.motto::before, .motto::after {
+  font-family: Georgia, serif;
+  font-size: 90px;
+  line-height: 1;
+  position: absolute;
+  opacity: 0.18;
+}
+.motto::before { content: "“"; top: 6px; left: 14px; }
+.motto::after  { content: "”"; bottom: -28px; right: 14px; }
+.motto .line {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+}
+.motto .caption {
+  display: block;
+  margin-top: 18px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ---------- 次のワンアクション ---------- */
+.key-message {
+  background: var(--card);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  margin: 22px 0;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(91,122,101,0.12);
+}
+.key-message .big {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--accent-dark);
+  margin-bottom: 12px;
+}
+.key-message .big span {
+  background: linear-gradient(transparent 62%, var(--accent-light) 62%);
+}
+.key-message p:not(.big) { font-size: 16px; text-align: left; }
+
+/* ---------- 最後に ---------- */
+.closing p { text-align: center; }
+.closing .choice {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  padding: 56px 0 64px;
+  background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+}
+.reassure {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px 20px 22px 58px;
+  position: relative;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 16px rgba(80,70,50,0.06);
+  line-height: 1.85;
+}
+.reassure::before {
+  content: "";
+  position: absolute;
+  left: 18px; top: 24px;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--accent-light);
+}
+.reassure::after {
+  content: "";
+  position: absolute;
+  left: 27px; top: 29px;
+  width: 7px; height: 12px;
+  border: solid var(--accent-dark);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.reassure strong { color: var(--accent-dark); }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 64px;
+  padding: 16px 20px;
+  border-radius: 999px;
+  background: var(--accent-dark);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(91,122,101,0.35);
+  transition: transform .15s ease, box-shadow .15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { transform: translateY(2px); box-shadow: 0 3px 10px rgba(91,122,101,0.3); }
+.btn .arrow {
+  width: 9px; height: 9px;
+  border: solid #fff;
+  border-width: 2.5px 2.5px 0 0;
+  transform: rotate(45deg);
+}
+
+footer {
+  padding: 24px 20px calc(32px + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-sub);
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- ふわっと表示 ---------- */
+.fade { opacity: 0; transform: translateY(16px); transition: opacity .8s ease, transform .8s ease; }
+.fade.show { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .fade { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- 小さめのスマホ ---------- */
+@media (max-width: 360px) {
+  :root { --fs-base: 16px; --fs-h2: 20px; }
+  .hero h1 { font-size: 24px; }
+  .motto .line { font-size: 18px; }
+  .funnel li:nth-child(4) { width: 72%; }
+}
+
+/* ---------- PC・タブレット ---------- */
+@media (min-width: 768px) {
+  :root { --fs-base: 18px; --fs-h2: 26px; }
+  section { padding: 80px 0; }
+  .hero { padding: 96px 0 72px; }
+  .hero h1 { font-size: 36px; }
+  .motto .line { font-size: 24px; }
+  .btn { max-width: 440px; margin: 0 auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ファーストビュー ===== -->
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">はじめにお読みください</span>
+    <h1>公式LINE<br>ご利用の注意点</h1>
+    <p class="thanks">ご登録ありがとうございます☺️</p>
+    <p>こちらの公式LINEは、私まどかが<br>お一人お一人のメッセージを確認しています。</p>
+    <p>まず最初に、いくつかお願いがあります。</p>
+  </div>
+</header>
+
+<!-- ===== ご利用時のお願い ===== -->
+<section class="alt">
+  <div class="wrap fade">
+    <span class="section-label">PLEASE</span>
+    <h2>ご利用時のお願い</h2>
+    <div class="card notice-card">
+      <p>こちらの公式LINEは、私まどかがお一人お一人のメッセージを確認しています☺️</p>
+      <p>そのため、最低限のマナーを守ってやり取りをお願いいたします。</p>
+      <div class="em">
+        <p>失礼なメッセージや、こちらが今後やり取りが難しいと判断した場合は、ブロックさせていただくことがあります。</p>
+        <p>また、一度ブロックされた方につきましては、再度お友だち追加をされましても、その後のやり取りはいたしかねます。</p>
+      </div>
+      <p class="note">あらかじめご了承ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 公式LINEへの登録は第一歩 ===== -->
+<section>
+  <div class="wrap fade">
+    <span class="section-label">FIRST STEP</span>
+    <h2>公式LINEへの登録は<br>第一歩です</h2>
+    <p>公式LINEにお問い合わせをくださったということは、在宅ワークやメルカリ物販に少しでも興味を持ってくださっている方だと思います。</p>
+    <p><strong>公式LINEに登録することは第一歩です。</strong></p>
+    <p><strong>ただ、登録しただけでは何も変わりません。</strong></p>
+    <p>Instagramを見ている方はたくさんいます。</p>
+    <p>その中の一部の方が公式LINEに登録されます。</p>
+    <p>そして、公式LINEに登録された方の中から、さらに一部の方が個別無料相談に進まれます。</p>
+    <p>そこからさらに一部の方が、実際にメルカリ物販をスタートされます。</p>
+  </div>
+</section>
+
+<!-- ===== 行動する人は少数派（縦型ステップ） ===== -->
+<section class="alt">
+  <div class="wrap fade">
+    <span class="section-label">ACTION</span>
+    <h2>行動する人は少数派</h2>
+    <ol class="funnel">
+      <li>Instagramを見ている人</li>
+      <li><small>その中の一部の方が</small>公式LINEに登録</li>
+      <li><small>その中のさらに一部の方が</small>個別無料相談へ</li>
+      <li><small>その中のさらに一部の方が</small>メルカリ物販を<br>スタート</li>
+    </ol>
+    <p class="belief">私は、こうやって少数派の道を選んで、一つずつ行動した人の先に、今までとは違う未来があると思っています。</p>
+  </div>
+</section>
+
+<!-- ===== 不安があるのは当たり前 ===== -->
+<section>
+  <div class="wrap fade">
+    <span class="section-label">IT'S OKAY</span>
+    <h2>不安があるのは<br>当たり前です</h2>
+    <ul class="quote-list">
+      <li>「私にもできるのかな」</li>
+      <li>「本当に大丈夫かな」</li>
+      <li>「失敗したらどうしよう」</li>
+    </ul>
+    <p>そう思う方も多いと思います。</p>
+    <p>でも、不安がなくなってから行動するのではなく、<strong>不安がある中でも、まず一つ行動してみることが大切</strong>だと思っています。</p>
+  </div>
+</section>
+
+<!-- ===== 心に留めている言葉 ===== -->
+<section class="alt">
+  <div class="wrap fade">
+    <span class="section-label">MY WORDS</span>
+    <h2>私がいつも<br>心に留めている言葉</h2>
+    <div class="motto">
+      <span class="line">不安は行動でしか<br>解決できない。</span>
+      <span class="line">行動の先にしか<br>成功はない。</span>
+      <span class="caption">これは、私自身がいつも心に留めている言葉です。</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 次のワンアクション ===== -->
+<section>
+  <div class="wrap fade">
+    <span class="section-label">NEXT ACTION</span>
+    <h2>次のワンアクション</h2>
+    <p class="center">まずは、次のワンアクションを<br>起こしてみてください☺️</p>
+    <p class="center"><strong>その一つが、個別無料相談です。</strong></p>
+    <div class="key-message">
+      <p class="big"><span>個別無料相談＝<br>入会を決める場所では<br>ありません。</span></p>
+      <p>まずは内容を知って、自分に合うかどうかを判断するために使ってください。</p>
+    </div>
+    <p>分からないこと、不安なこと、気になっていることも、遠慮なく聞いていただいて大丈夫です☺️</p>
+  </div>
+</section>
+
+<!-- ===== 最後に ===== -->
+<section class="alt closing">
+  <div class="wrap fade">
+    <span class="section-label">MESSAGE</span>
+    <h2>最後に</h2>
+    <p class="choice">見るだけで終わるのか。</p>
+    <p class="choice">一歩進んでみるのか。</p>
+    <p>決めるのは自分です。</p>
+    <p>その一歩が、これからの働き方や未来を<br>変えるきっかけになるかもしれません☺️</p>
+  </div>
+</section>
+
+<!-- ===== ボタン（リンク先は href="..." の部分） ===== -->
+<section class="cta">
+  <div class="wrap fade">
+    <p class="reassure"><strong>個別無料相談＝入会を決める場所ではありません。</strong><br>まずは内容を知って、自分に合うか判断するために使ってください。</p>
+    <a class="btn" href="https://madokatsuzuki.github.io/soudan/">個別無料相談の詳細を見る<span class="arrow"></span></a>
+  </div>
+</section>
+
+<footer>公式LINEご利用の注意点</footer>
+
+<script>
+  // スクロールに合わせて、ふわっと表示させる処理
+  (function () {
+    var items = document.querySelectorAll('.fade');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('show'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
+</body>
+</html>
